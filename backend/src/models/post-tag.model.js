@@ -1,0 +1,51 @@
+const { v7: uuidv7 } = require("uuid");
+
+module.exports = (sequelize, DataTypes) => {
+  const PostTag = sequelize.define(
+    "PostTag",
+    {
+      post_tag_id: {
+        type: DataTypes.UUID,
+        defaultValue: () => uuidv7(),
+        primaryKey: true,
+        allowNull: false,
+      },
+      post_id: {
+        type: DataTypes.UUID,
+        allowNull: false,
+      },
+      tag_id: {
+        type: DataTypes.UUID,
+        allowNull: false,
+      },
+      created_at: {
+        type: DataTypes.DATE,
+        defaultValue: DataTypes.NOW,
+      },
+      updated_at: {
+        type: DataTypes.DATE,
+        defaultValue: DataTypes.NOW,
+      },
+    },
+    {
+      tableName: "post_tags",
+      timestamps: true,
+      createdAt: "created_at",
+      updatedAt: "updated_at",
+      indexes: [
+        {
+          unique: true,
+          fields: ["post_id", "tag_id"],
+        },
+        {
+          fields: ["post_id"],
+        },
+        {
+          fields: ["tag_id"],
+        },
+      ],
+    }
+  );
+
+  return PostTag;
+};

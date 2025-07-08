@@ -1,0 +1,13 @@
+/* styles.css or styles.module.css */
+.buttonLink {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.buttonLink:hover {
+  background-color: #f1f1f1 !important;
+  color: #667085;
+}
+
+.buttonLink:focus {
+  outline: none;
+}

@@ -1,0 +1,9 @@
+{
+  "name": "Donna AI",
+  "short_name": "Donna",
+  "description": "Intelligent Virtual Receptionist",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0F172B",
+  "theme_color": "#0F172B"
+}

@@ -1,0 +1,30 @@
+/* Import Google Fonts - you can customize these as needed */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Apply fonts to elements */
+body {
+  font-family: 'Inter';
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Inter';
+  font-weight: 600;
+}
+
+/* Optional: Customize specific text elements */
+.mantine-Title-root {
+  font-family: 'Inter';
+}
+
+.mantine-Text-root {
+  font-family: 'Inter';
+}
+
+.underline-none {
+  text-decoration: none;
+}
